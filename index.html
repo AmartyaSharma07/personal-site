@@ -15,9 +15,9 @@
     <header>
         <nav class="navbar">
 
-            <div class="logo">
+            <a href="#home" class="logo">
                 Amartya<span>.</span>
-            </div>
+            </a>
 
             <div class="nav-links">
                 <a href="#home">Home</a>
@@ -36,7 +36,7 @@
 
         <section id="home" class="hero">
 
-            <div class="hero-content">
+            <div class="hero-content reveal">
 
                 <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
@@ -45,14 +45,14 @@
                 </h1>
 
                 <h2>
-                    CSE-DS Student & Technology Enthusiast
+                    I'm a <span id="typing-text"></span>
                 </h2>
 
                 <p class="hero-text">
-                    I'm a student passionate about technology, coding,
-                    software development, and learning new things.
-                    I'm currently exploring the world of computer science
-                    and building my skills one project at a time.
+                    I'm passionate about technology, coding, software
+                    development and learning new things. I'm building my
+                    skills one project at a time and documenting the journey
+                    along the way.
                 </p>
 
                 <div class="hero-buttons">
@@ -61,17 +61,27 @@
                     </a>
 
                     <a href="#contact" class="button secondary">
-                        Contact Me
+                        Let's Connect
                     </a>
                 </div>
 
             </div>
 
-            <div class="hero-decoration">
+            <div class="hero-decoration reveal">
                 <div class="glow-circle"></div>
-                <div class="floating-card">
-                    <span>&lt;/&gt;</span>
-                    <p>Building & Learning</p>
+
+                <div class="code-card">
+                    <div class="code-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <p><span class="code-blue">const</span> <span class="code-white">me</span> = {</p>
+                    <p class="indent"><span class="code-purple">learning:</span> <span class="code-green">true</span>,</p>
+                    <p class="indent"><span class="code-purple">building:</span> <span class="code-green">true</span>,</p>
+                    <p class="indent"><span class="code-purple">curious:</span> <span class="code-green">true</span></p>
+                    <p>};</p>
                 </div>
             </div>
 
@@ -80,56 +90,58 @@
 
         <section id="about" class="section">
 
-            <div class="section-title">
+            <div class="section-title reveal">
                 <p>WHO I AM</p>
                 <h2>About Me</h2>
             </div>
 
             <div class="about-content">
 
-                <div class="about-card">
+                <div class="about-card reveal">
                     <h3>A little about me</h3>
 
                     <p>
-                        I'm Amartya Sharma, a Computer Science and
-                        Data Science student who enjoys exploring
-                        technology and understanding how things work.
+                        I'm Amartya Sharma, a Computer Science and Data Science
+                        student interested in technology and software development.
                     </p>
 
                     <p>
-                        I'm currently focused on improving my programming
-                        skills, learning new technologies, and building
-                        projects that help me turn what I learn into
-                        something practical.
+                        I'm currently focused on strengthening my programming
+                        fundamentals, learning web development and exploring
+                        different areas of computer science.
                     </p>
 
                     <p>
-                        Outside of coding, I enjoy gaming, exploring
-                        technology, and spending time discovering new
-                        things to learn.
+                        I enjoy taking something I'm learning and turning it
+                        into an actual project. This website is one of those
+                        projects.
                     </p>
                 </div>
 
                 <div class="about-stats">
 
-                    <div class="stat-card">
-                        <h3>01</h3>
-                        <p>Curious Mind</p>
+                    <div class="stat-card reveal">
+                        <strong>01</strong>
+                        <span>Curious</span>
+                        <p>Always exploring new ideas.</p>
                     </div>
 
-                    <div class="stat-card">
-                        <h3>02</h3>
-                        <p>Always Learning</p>
+                    <div class="stat-card reveal">
+                        <strong>02</strong>
+                        <span>Learning</span>
+                        <p>Constantly improving my skills.</p>
                     </div>
 
-                    <div class="stat-card">
-                        <h3>03</h3>
-                        <p>Building Projects</p>
+                    <div class="stat-card reveal">
+                        <strong>03</strong>
+                        <span>Building</span>
+                        <p>Turning ideas into projects.</p>
                     </div>
 
-                    <div class="stat-card">
-                        <h3>04</h3>
-                        <p>Tech Enthusiast</p>
+                    <div class="stat-card reveal">
+                        <strong>04</strong>
+                        <span>Growing</span>
+                        <p>Taking things one step at a time.</p>
                     </div>
 
                 </div>
@@ -141,47 +153,65 @@
 
         <section id="skills" class="section">
 
-            <div class="section-title">
+            <div class="section-title reveal">
                 <p>WHAT I'M LEARNING</p>
                 <h2>Skills & Technologies</h2>
             </div>
 
             <div class="skills-grid">
 
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-icon">&lt;/&gt;</div>
-                    <h3>Programming</h3>
-                    <p>
-                        Learning programming fundamentals and
-                        developing problem-solving skills.
-                    </p>
+                    <h3>HTML</h3>
+                    <p>Building the structure of websites.</p>
+                    <div class="skill-line">
+                        <span style="width: 70%"></span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">WEB</div>
-                    <h3>Web Development</h3>
-                    <p>
-                        Exploring HTML, CSS and JavaScript while
-                        building websites and experimenting with design.
-                    </p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">CSS</div>
+                    <h3>CSS</h3>
+                    <p>Creating layouts, designs and animations.</p>
+                    <div class="skill-line">
+                        <span style="width: 60%"></span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">DS</div>
-                    <h3>Data Science</h3>
-                    <p>
-                        Beginning my journey into data science,
-                        programming and data-driven technology.
-                    </p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>Learning how to make websites interactive.</p>
+                    <div class="skill-line">
+                        <span style="width: 35%"></span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card reveal">
+                    <div class="skill-icon">PY</div>
+                    <h3>Python</h3>
+                    <p>Learning programming and problem solving.</p>
+                    <div class="skill-line">
+                        <span style="width: 45%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
                     <div class="skill-icon">GIT</div>
                     <h3>Git & GitHub</h3>
-                    <p>
-                        Using GitHub to manage projects, learn
-                        development workflows and share my work.
-                    </p>
+                    <p>Managing and sharing my projects online.</p>
+                    <div class="skill-line">
+                        <span style="width: 55%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">DS</div>
+                    <h3>Data Science</h3>
+                    <p>Beginning my journey into data and AI.</p>
+                    <div class="skill-line">
+                        <span style="width: 25%"></span>
+                    </div>
                 </div>
 
             </div>
@@ -191,78 +221,82 @@
 
         <section id="projects" class="section">
 
-            <div class="section-title">
+            <div class="section-title reveal">
                 <p>WHAT I'M BUILDING</p>
-                <h2>Projects</h2>
+                <h2>My Projects</h2>
             </div>
 
             <div class="projects-grid">
 
-                <div class="project-card">
+                <article class="project-card reveal">
 
-                    <div class="project-number">
-                        01
-                    </div>
+                    <span class="project-number">01</span>
 
                     <h3>Personal Website</h3>
 
                     <p>
-                        The website you're currently looking at.
-                        Built while learning HTML and CSS and designed
-                        as my personal corner of the internet.
+                        A personal portfolio website built from scratch while
+                        learning HTML, CSS and JavaScript.
                     </p>
 
                     <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
+                        <span>JavaScript</span>
                         <span>GitHub</span>
                     </div>
 
-                </div>
+                    <a href="#contact" class="project-link">
+                        Current Project →
+                    </a>
+
+                </article>
 
 
-                <div class="project-card">
+                <article class="project-card reveal">
 
-                    <div class="project-number">
-                        02
-                    </div>
+                    <span class="project-number">02</span>
 
-                    <h3>Future Project</h3>
-
-                    <p>
-                        A space for the next project I build while
-                        learning programming, development and
-                        data science.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Learning</span>
-                        <span>Building</span>
-                    </div>
-
-                </div>
-
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <h3>More Coming Soon</h3>
+                    <h3>Coming Soon</h3>
 
                     <p>
-                        This portfolio will continue to grow as I
-                        learn new technologies and create more
-                        projects.
+                        My next project will be added here as I continue
+                        learning and experimenting with technology.
                     </p>
 
                     <div class="project-tags">
                         <span>Future</span>
-                        <span>Projects</span>
+                        <span>Building</span>
                     </div>
 
-                </div>
+                    <span class="project-link">
+                        In progress...
+                    </span>
+
+                </article>
+
+
+                <article class="project-card reveal">
+
+                    <span class="project-number">03</span>
+
+                    <h3>More Projects</h3>
+
+                    <p>
+                        This portfolio will grow with me as I learn new
+                        technologies and build more useful things.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Learning</span>
+                        <span>Creating</span>
+                    </div>
+
+                    <span class="project-link">
+                        Coming soon...
+                    </span>
+
+                </article>
 
             </div>
 
@@ -271,14 +305,14 @@
 
         <section id="interests" class="section">
 
-            <div class="section-title">
-                <p>WHEN I'M NOT CODING</p>
-                <h2>My Interests</h2>
+            <div class="section-title reveal">
+                <p>BEYOND CODING</p>
+                <h2>Things I Enjoy</h2>
             </div>
 
             <div class="interests-grid">
 
-                <div class="interest-card">
+                <div class="interest-card reveal">
                     <span>🎮</span>
                     <h3>Gaming</h3>
                     <p>
@@ -287,31 +321,30 @@
                     </p>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card reveal">
                     <span>💻</span>
                     <h3>Technology</h3>
                     <p>
-                        I enjoy exploring new technology, hardware,
-                        software and discovering how things work.
+                        I enjoy exploring new hardware, software and
+                        technology.
                     </p>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card reveal">
                     <span>🚀</span>
                     <h3>Learning</h3>
                     <p>
-                        I'm always interested in learning something
-                        new and improving my skills.
+                        I enjoy learning new skills and experimenting
+                        with things I've never tried before.
                     </p>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card reveal">
                     <span>🎨</span>
                     <h3>Creativity</h3>
                     <p>
-                        I like experimenting with ideas and turning
-                        them into something people can actually see
-                        and use.
+                        I like turning ideas into things that people
+                        can actually see and use.
                     </p>
                 </div>
 
@@ -322,7 +355,7 @@
 
         <section id="contact" class="contact-section">
 
-            <div class="contact-box">
+            <div class="contact-box reveal">
 
                 <p>LET'S CONNECT</p>
 
@@ -331,24 +364,28 @@
                 </h2>
 
                 <p>
-                    Feel free to reach out. I'm always open to
-                    connecting and learning from new people.
+                    Feel free to reach out. I'm always open to connecting,
+                    collaborating and learning from new people.
                 </p>
 
-                <a
-                    href="mailto:gunjan.amartya@gmail.com"
-                    class="button primary"
-                >
-                    Email Me
-                </a>
+                <div class="contact-buttons">
 
-                <a
-                    href="https://github.com/"
-                    target="_blank"
-                    class="button secondary"
-                >
-                    GitHub
-                </a>
+                    <a
+                        href="mailto:gunjan.amartya@gmail.com"
+                        class="button primary"
+                    >
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        class="button secondary"
+                    >
+                        GitHub
+                    </a>
+
+                </div>
 
             </div>
 
@@ -363,15 +400,14 @@
             Amartya<span>.</span>
         </div>
 
-        <p>
-            Designed & built by Amartya Sharma
-        </p>
+        <p>Designed & built by Amartya Sharma</p>
 
-        <p>
-            © 2026 Amartya Sharma
-        </p>
+        <p>© 2026 Amartya Sharma</p>
 
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
