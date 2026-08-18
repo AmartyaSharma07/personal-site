@@ -1,99 +1,166 @@
-const typingText = document.getElementById("typing-text");
-
-const words = [
-    "CSE-DS Student",
-    "Technology Enthusiast",
-    "Developer in Progress",
-    "Curious Learner"
-];
-
-let wordIndex = 0;
-let letterIndex = 0;
-let deleting = false;
-
-function typeEffect() {
-
-    const currentWord = words[wordIndex];
-
-    if (!deleting) {
-        typingText.textContent = currentWord.substring(0, letterIndex + 1);
-        letterIndex++;
-
-        if (letterIndex === currentWord.length) {
-            deleting = true;
-            setTimeout(typeEffect, 1400);
-            return;
-        }
-
-    } else {
-        typingText.textContent = currentWord.substring(0, letterIndex - 1);
-        letterIndex--;
-
-        if (letterIndex === 0) {
-            deleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-        }
-    }
-
-    setTimeout(typeEffect, deleting ? 50 : 90);
-}
-
-typeEffect();
+/* =========================================
+   AMARTYA SHARMA - WEBSITE JAVASCRIPT
+   ========================================= */
 
 
-const revealElements = document.querySelectorAll(".reveal");
+/* ---------- TYPING ANIMATION ---------- */
 
-const observer = new IntersectionObserver(
-    function(entries) {
+const typingElement =
+    document.getElementById("typing-text");
 
-        entries.forEach(function(entry) {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+if (typingElement) {
+
+    const words = [
+        "CSE-DS Student",
+        "Developer in Progress",
+        "Tech Enthusiast",
+        "Creative Learner"
+    ];
+
+    let wordIndex = 0;
+    let characterIndex = 0;
+    let deleting = false;
+
+
+    function typeEffect() {
+
+        const currentWord =
+            words[wordIndex];
+
+
+        if (!deleting) {
+
+            typingElement.textContent =
+                currentWord.substring(
+                    0,
+                    characterIndex + 1
+                );
+
+            characterIndex++;
+
+
+            if (
+                characterIndex ===
+                currentWord.length
+            ) {
+
+                deleting = true;
+
+                setTimeout(
+                    typeEffect,
+                    1400
+                );
+
+                return;
             }
 
-        });
+        } else {
 
-    },
-    {
-        threshold: 0.15
+            typingElement.textContent =
+                currentWord.substring(
+                    0,
+                    characterIndex - 1
+                );
+
+            characterIndex--;
+
+
+            if (characterIndex === 0) {
+
+                deleting = false;
+
+                wordIndex =
+                    (wordIndex + 1)
+                    % words.length;
+
+            }
+
+        }
+
+
+        setTimeout(
+            typeEffect,
+            deleting ? 45 : 80
+        );
+
     }
+
+
+    typeEffect();
+
+}
+
+
+/* ---------- SCROLL / PAGE ANIMATION ---------- */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+function revealOnLoad() {
+
+    revealElements.forEach(
+        (element, index) => {
+
+            setTimeout(() => {
+
+                element.classList.add("show");
+
+            }, index * 100);
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "load",
+    revealOnLoad
 );
 
-revealElements.forEach(function(element) {
-    observer.observe(element);
-});
+
+/* ---------- MOBILE MENU ---------- */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.getElementById("navLinks");
 
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+if (menuButton && navLinks) {
 
-window.addEventListener("scroll", function() {
+    menuButton.addEventListener(
+        "click",
+        () => {
 
-    let currentSection = "";
+            navLinks.classList.toggle(
+                "open"
+            );
 
-    sections.forEach(function(section) {
-
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute("id");
         }
+    );
+
+
+    const links =
+        navLinks.querySelectorAll("a");
+
+
+    links.forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                navLinks.classList.remove(
+                    "open"
+                );
+
+            }
+        );
 
     });
 
-    navLinks.forEach(function(link) {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + currentSection) {
-            link.classList.add("active");
-        }
-
-    });
-
-});
+}
