@@ -1,15 +1,8 @@
-/* =========================================
-   AMARTYA SHARMA - WEBSITE JAVASCRIPT
-   ========================================= */
+/* TYPING ANIMATION */
 
+const typing = document.getElementById("typing");
 
-/* ---------- TYPING ANIMATION ---------- */
-
-const typingElement =
-    document.getElementById("typing-text");
-
-
-if (typingElement) {
+if (typing) {
 
     const words = [
         "CSE-DS Student",
@@ -19,126 +12,108 @@ if (typingElement) {
     ];
 
     let wordIndex = 0;
-    let characterIndex = 0;
+    let charIndex = 0;
     let deleting = false;
-
 
     function typeEffect() {
 
-        const currentWord =
-            words[wordIndex];
-
+        const word = words[wordIndex];
 
         if (!deleting) {
 
-            typingElement.textContent =
-                currentWord.substring(
-                    0,
-                    characterIndex + 1
-                );
+            typing.textContent =
+                word.substring(0, charIndex + 1);
 
-            characterIndex++;
+            charIndex++;
 
-
-            if (
-                characterIndex ===
-                currentWord.length
-            ) {
+            if (charIndex === word.length) {
 
                 deleting = true;
 
-                setTimeout(
-                    typeEffect,
-                    1400
-                );
+                setTimeout(typeEffect, 1400);
 
                 return;
             }
 
         } else {
 
-            typingElement.textContent =
-                currentWord.substring(
-                    0,
-                    characterIndex - 1
-                );
+            typing.textContent =
+                word.substring(0, charIndex - 1);
 
-            characterIndex--;
+            charIndex--;
 
-
-            if (characterIndex === 0) {
+            if (charIndex === 0) {
 
                 deleting = false;
 
                 wordIndex =
-                    (wordIndex + 1)
-                    % words.length;
-
+                    (wordIndex + 1) % words.length;
             }
-
         }
-
 
         setTimeout(
             typeEffect,
             deleting ? 45 : 80
         );
-
     }
 
-
     typeEffect();
-
 }
 
 
-/* ---------- SCROLL / PAGE ANIMATION ---------- */
+/* SCROLL ANIMATION */
 
 const revealElements =
     document.querySelectorAll(".reveal");
 
 
-function revealOnLoad() {
+function revealOnScroll() {
 
-    revealElements.forEach(
-        (element, index) => {
+    revealElements.forEach(element => {
 
-            setTimeout(() => {
+        const position =
+            element.getBoundingClientRect().top;
 
-                element.classList.add("show");
+        const screenHeight =
+            window.innerHeight;
 
-            }, index * 100);
+        if (position < screenHeight - 80) {
+
+            element.classList.add("show");
 
         }
-    );
 
+    });
 }
 
 
 window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+window.addEventListener(
     "load",
-    revealOnLoad
+    revealOnScroll
 );
 
 
-/* ---------- MOBILE MENU ---------- */
+/* MOBILE MENU */
 
-const menuButton =
-    document.getElementById("menuButton");
+const menuBtn =
+    document.getElementById("menuBtn");
 
 const navLinks =
     document.getElementById("navLinks");
 
 
-if (menuButton && navLinks) {
+if (menuBtn && navLinks) {
 
-    menuButton.addEventListener(
+    menuBtn.addEventListener(
         "click",
         () => {
 
-            navLinks.classList.toggle(
-                "open"
-            );
+            navLinks.classList.toggle("open");
 
         }
     );
@@ -154,9 +129,7 @@ if (menuButton && navLinks) {
             "click",
             () => {
 
-                navLinks.classList.remove(
-                    "open"
-                );
+                navLinks.classList.remove("open");
 
             }
         );
